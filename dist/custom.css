@@ -1,0 +1,11 @@
+code.singleCode{
+    border-radius: 4px;
+    color: rgb(10, 54, 104);
+    background-color: rgb(147, 213, 248);
+    padding: 2px 6px;
+}
+
+div.fragment{
+    font-size: x-large;
+    text-align: left;
+}
