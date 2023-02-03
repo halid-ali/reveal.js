@@ -1,0 +1,80 @@
+<section>
+  <div>Standard Providers</div>
+  <div><hr /></div>
+  <div class="fragment">This is how a standard provider looks like.</div>
+  <div class="fragment">
+    <pre>
+		<code data-trim data-noescape data-line-numbers data-ln-start-from="7" data-line-numbers="9">
+			@Module({
+				controllers: [ProductController],
+				providers: [ProductService]
+			})
+		</code>
+	  </pre>
+  </div>
+  <div class="fragment">
+    The syntax
+    <code class="singleCode">providers: [ProductService]</code>
+    is short-hand for the more complete syntax
+  </div>
+  <div class="fragment">
+    <pre>
+		<code data-trim data-noescape data-line-numbers data-ln-start-from="7">
+			providers: [{
+				provide: ProductService, //Token
+				useClass: ProductService //Class
+			}];
+		</code>
+	  </pre>
+  </div>
+  <div class="fragment">
+    The token
+    <code class="singleCode">ProductService</code>
+    is associated with the class
+    <code class="singleCode">ProductService</code>.
+  </div>
+</section>
+<section>
+  <div>Other Providers</div>
+  <div><hr /></div>
+  <div class="fragment">Value Providers</div>
+  <div class="fragment">
+    <pre>
+		<code data-trim data-noescape data-line-numbers data-ln-start-from="3" data-line-numbers="9">
+			const ProductServiceMock = {
+				//mock implementation
+			}
+			@Module({
+				imports: [ProductModule],
+				providers: [{
+					provide: ProductService,
+					useValue: ProductServiceMock
+				}]
+			})
+		</code>
+	  </pre>
+  </div>
+  <div class="fragment">Non-class Based Value Providers</div>
+  <div class="fragment">
+    <pre>
+		<code data-trim data-noescape data-line-numbers data-ln-start-from="7" data-line-numbers="9">
+			@Module({
+				providers: [{
+					provide: 'HOST_ADDRESS',
+					useValue: HostAddress
+				}]
+			})
+		</code>
+	  </pre>
+  </div>
+  <div class="fragment">
+    <pre>
+		<code data-trim data-noescape data-line-numbers data-ln-start-from="7" data-line-numbers="9">
+			@Injectable()
+			export class ProductRepository{
+				constructor(@Inject('HOST_ADDRESS') hostAddress: HostAddress){}
+			}
+		</code>
+	  </pre>
+  </div>
+</section>
