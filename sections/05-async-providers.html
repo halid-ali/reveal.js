@@ -1,0 +1,25 @@
+<div>
+  <div>Async Providers</div>
+  <div><hr /></div>
+  <div class="content">
+    At times, the application start should be delayed until one or more
+    asynchronous tasks are completed. For example, you may not want to start
+    accepting requests until the connection with the database has been
+    established. You can achieve this using asynchronous providers.
+  </div>
+  <div>
+    <pre style="font-size: x-large">
+        <code data-trim data-noescape data-line-numbers data-ln-start-from="3">
+            @Module({
+                providers: [{
+                    provide: 'ASYNC_CONNECTION',
+                    useFactory: async () => {
+                        const connection = await createConnection(options);
+                        return connection;
+                    }
+                }]
+            })
+        </code>
+    </pre>
+  </div>
+</div>
