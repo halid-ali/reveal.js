@@ -1,7 +1,9 @@
 <section>
   <div>Standard Providers</div>
   <div><hr /></div>
-  <div class="fragment">This is how a standard provider looks like.</div>
+  <div class="fragment content">
+    This is how a standard provider looks like.
+  </div>
   <div class="fragment">
     <pre>
 		<code data-trim data-noescape data-line-numbers data-ln-start-from="7" data-line-numbers="9">
@@ -12,7 +14,7 @@
 		</code>
 	  </pre>
   </div>
-  <div class="fragment">
+  <div class="fragment content">
     The syntax
     <code class="singleCode">providers: [ProductService]</code>
     is short-hand for the more complete syntax
@@ -27,7 +29,7 @@
 		</code>
 	  </pre>
   </div>
-  <div class="fragment">
+  <div class="fragment content">
     The token
     <code class="singleCode">ProductService</code>
     is associated with the class
@@ -37,13 +39,13 @@
 <section>
   <div>Other Providers</div>
   <div><hr /></div>
-  <div class="fragment">Value Providers</div>
+  <div class="fragment content">Value Providers</div>
   <div class="fragment">
-    <pre>
-		<code data-trim data-noescape data-line-numbers data-ln-start-from="3" data-line-numbers="9">
+    <pre style="font-size: large">
+		<code data-trim data-noescape data-line-numbers data-ln-start-from="3">
 			const ProductServiceMock = {
 				//mock implementation
-			}
+			};
 			@Module({
 				imports: [ProductModule],
 				providers: [{
@@ -52,12 +54,12 @@
 				}]
 			})
 		</code>
-	  </pre>
+	</pre>
   </div>
-  <div class="fragment">Non-class Based Value Providers</div>
+  <div class="fragment content">Non-class Based Value Providers</div>
   <div class="fragment">
-    <pre>
-		<code data-trim data-noescape data-line-numbers data-ln-start-from="7" data-line-numbers="9">
+    <pre style="font-size: large">
+		<code data-trim data-noescape data-line-numbers data-ln-start-from="3">
 			@Module({
 				providers: [{
 					provide: 'HOST_ADDRESS',
@@ -68,8 +70,8 @@
 	  </pre>
   </div>
   <div class="fragment">
-    <pre>
-		<code data-trim data-noescape data-line-numbers data-ln-start-from="7" data-line-numbers="9">
+    <pre style="font-size: large">
+		<code data-trim data-noescape data-line-numbers data-ln-start-from="7" >
 			@Injectable()
 			export class ProductRepository{
 				constructor(@Inject('HOST_ADDRESS') hostAddress: HostAddress){}
