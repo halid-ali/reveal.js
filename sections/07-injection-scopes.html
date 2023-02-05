@@ -1,0 +1,37 @@
+<div>
+  <div>Injection Scopes</div>
+  <div><hr /></div>
+  <div class="content">
+    Injection scopes provide a mechanism to obtain the desired
+    provider/controller lifetime behavior.<br /><br />
+  </div>
+  <div class="content">
+    <ul>
+      <li>Provider Scope</li>
+    </ul>
+  </div>
+  <div>
+    <pre>
+        <code data-trim data-noescape data-line-numbers data-ln-start-from="3">
+            @Injectable({ scope: Scope.REQUEST })
+            export class ProductsService {}
+        </code>
+    </pre>
+  </div>
+  <div class="content">
+    <ul>
+      <li>Controller Scope</li>
+    </ul>
+  </div>
+  <div>
+    <pre>
+        <code data-trim data-noescape data-line-numbers data-ln-start-from="3">
+            @Controller({
+                path: 'products',
+                scope: Scope.REQUEST,
+            })
+            export class ProductsController {}
+        </code>
+    </pre>
+  </div>
+</div>
