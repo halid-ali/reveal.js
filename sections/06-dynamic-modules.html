@@ -1,0 +1,35 @@
+<div>
+  <div>Dynamic Modules</div>
+  <div><hr /></div>
+  <div class="content">
+    This feature enables you to easily create customizable modules that can
+    register and configure providers dynamically.
+  </div>
+  <div>
+    <pre style="font-size: large">
+        <code data-trim data-noescape data-line-numbers data-ln-start-from="3">
+            @Module()
+            export class DatabaseModule {
+                static forRoot(entities = [], options?): DynamicModule {
+                    const providers = createProvider(options, entities);
+                    return {
+                        module: DatabaseModule,
+                        providers: providers,
+                        export: providers
+                    };
+                }
+            }
+        </code>
+    </pre>
+  </div>
+  <div>
+    <pre style="font-size: large">
+        <code data-trim data-noescape data-line-numbers data-ln-start-from="3">
+            @Module({
+                imports: [DatabaseModule.forRoot(User)],
+            })
+            export class AppModule {}
+        </code>
+    </pre>
+  </div>
+</div>
