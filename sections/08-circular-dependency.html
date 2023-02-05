@@ -1,0 +1,25 @@
+<div>
+  <div>Circular Dependency</div>
+  <div><hr /></div>
+  <div class="content">
+    A circular dependency occurs when two classes depend on each other. In such
+    cases, Nest enables resolving circular dependencies between providers in two
+    ways. <br /><br />
+  </div>
+  <div class="content">
+    <ul>
+      <li>Forward Referencing</li>
+    </ul>
+  </div>
+  <div>
+    <pre>
+        <code data-trim data-noescape data-line-numbers data-ln-start-from="3">
+            @Injectable()
+            export class ProductsService {
+                constructor(@Inject(forwardRef(() => CommonService))
+                private commonService: CommonService) {}
+            }
+        </code>
+    </pre>
+  </div>
+</div>
