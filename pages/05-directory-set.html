@@ -1,0 +1,49 @@
+<div>
+  <div>Standard Files and Directory Structure</div>
+  <div><hr /></div>
+  <div>
+    <div class="fragment" style="font-size: x-large">
+      <div
+        style="
+          float: left;
+          margin-right: 20px;
+          padding: 15px;
+          background-color: rgb(41, 41, 41);
+          border: 1px solid white;
+        ">
+        <div class="int0">📒 repository<span class="number">[1]</span></div>
+        <div class="int30">📄 antora.yml<span class="number">[2]</span></div>
+        <div class="int30">📂 modules<span class="number">[3]</span></div>
+        <div class="int60">📂 ROOT<span class="number">[4]</span></div>
+        <div class="int90">📁 attachments</div>
+        <div class="int90">📁 examples</div>
+        <div class="int90">📁 images</div>
+        <div class="int90">📁 pages<span class="number">[5]</span></div>
+        <div class="int90">📁 partials<span class="number">[6]</span></div>
+        <div class="int90">📄 nav.adoc<span class="number">[7]</span></div>
+        <div class="int60">📂 named-module</div>
+        <div class="int90">📁 pages</div>
+        <div class="int90">📄 nav.adoc</div>
+        <div class="int30">📁 packages<span class="number">[8]</span></div>
+      </div>
+      <div class="fragment" style="text-align: left;">
+        <p>
+          Antora collects and processes content source files according to a set of hierarchical files and directories it
+          expects to find at a content source root.
+        </p>
+        <p>
+          <ol>
+            <li>Content source root.</li>
+            <li>The descriptor file which is required at each content root</li>
+            <li>It must be located at the same level as antora.yml file</li>
+            <li>ROOT is reserved directory name and must be in all uppercase</li>
+            <li>Pages family directory (reserved directory name)</li>
+            <li>Partials family directory (reserved directory name)</li>
+            <li>Navigation file</li>
+            <li>It won’t be processed because located outside the modules</li>
+          </ol>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
