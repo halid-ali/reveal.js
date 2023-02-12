@@ -1,0 +1,35 @@
+<div>
+  <div>Install and Run</div>
+  <div>
+    <hr />
+  </div>
+  <div>
+    <div class="fragment">
+      <div style="font-size: x-large; text-align: left">Install Node.js</div>
+      <pre>
+        <code>$ nvm install 18.10.0</code>
+      </pre>
+    </div>
+    <div class="fragment">
+      <div style="font-size: x-large; text-align: left">Install Antora</div>
+      <pre>
+        <code>$ node -e "fs.writeFileSync('package.json', '{}')"
+$ npm i -D -E @antora/cli@3.1 @antora/site-generator@3.1</code>
+      </pre>
+    </div>
+    <div class="fragment">
+      <div style="font-size: x-large; text-align: left">Verify Antora</div>
+      <pre>
+        <code>$ npx antora -v
+@antora/cli: 3.1.2
+@antora/site-generator: 3.1.2</code>
+      </pre>
+    </div>
+    <div class="fragment">
+      <div style="font-size: x-large; text-align: left">Run Antora</div>
+      <pre>
+        <code>$ npx antora --fetch antora-playbook.yml</code>
+      </pre>
+    </div>
+  </div>
+</div>
