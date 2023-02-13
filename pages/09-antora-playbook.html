@@ -1,0 +1,26 @@
+<div>
+  <div>Antora Playbook</div>
+  <div><hr /></div>
+  <div>
+    <p style="text-align: justify; font-size: x-large">
+      Antora playbook controls the content which will be included in the site, which UI is applied to it, where it is
+      published. The settings in the playbook file, in combination with CLI options and environment variables, tell
+      Antora how to operate.
+    </p>
+    <pre>
+        <code data-line-numbers>site:
+  title: Site title
+  start_page: site-name::index.adoc
+content:
+  sources:
+  - url: github repo link
+      branches: v1, v2
+      start_path: docs
+ui:
+  bundle:
+      url: ui-bundle.zip link
+      snapshot: true
+        </code>
+    </pre>
+  </div>
+</div>
