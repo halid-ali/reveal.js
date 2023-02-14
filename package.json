@@ -10,7 +10,8 @@
   "scripts": {
     "test": "gulp test",
     "start": "gulp serve",
-    "build": "gulp build"
+    "build": "gulp build",
+    "reveal-server": "node node_modules/reveal-notes-server"
   },
   "author": {
     "name": "Hakim El Hattab",
