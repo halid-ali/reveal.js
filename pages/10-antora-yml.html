@@ -1,0 +1,24 @@
+<div>
+  <div>antora.yml</div>
+  <div><hr /></div>
+  <div style="font-size: x-large; text-align: left">
+    <span> antora.yml is a configuration file that serves two crucial functions. </span>
+    <ol style="margin-top: 30px">
+      <li class="fragment cList">
+        It signals to Antora that it should find a sibling modules directory that contains source files that belong to a
+        component version.
+      </li>
+      <li class="fragment cList">
+        It provides the required and optional component version metadata that Antora assigns to the source files
+      </li>
+    </ol>
+  </div>
+  <div class="fragment">
+    <pre>
+        <code>name: antora-demo
+version: v4.0
+nav:
+  - modules/ROOT/nav.adoc</code>
+    </pre>
+  </div>
+</div>
