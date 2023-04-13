@@ -1,23 +1,33 @@
 <div>
   <div>Xref and Links</div>
   <div><hr /></div>
-  <div class="fragment" style="text-align: left; font-size: x-large">
+  <div style="text-align: left; font-size: x-large">
     An AsciiDoc xref macro is used to create a source-to-source cross reference from a resource to a publishable
     resource.
   </div>
-  <div class="fragment">
+  <div>
     <img
       src="https://docs.antora.org/antora/latest/page/_images/xref-macro-with-resource-id-for-page.svg"
       alt="Xref macro structure for referencing a page"
       width="600px"
       style="background-color: white; padding: 15px" />
   </div>
-  <div class="fragment">
+  <div>
     <pre><code>//Page links within a module
 xref:mypage.adoc[My Page]</code></pre>
   </div>
-  <div class="fragment">
+  <div>
     <pre><code>//Page links between modules
 xref:modulename:mypage.adoc[My Page]</code></pre>
   </div>
+  <div>
+    <pre><code>//Page links between versions
+xref:version@component:modulename:mypage.adoc[My Page]</code></pre>
+  </div>
 </div>
+<aside class="notes">
+  <div style="font-size: large !important">
+    <p>Xrefs are used to create links to the pages within module, between modules and even between versions.</p>
+    <hr />
+  </div>
+</aside>

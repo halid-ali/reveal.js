@@ -31,19 +31,59 @@
           Antora collects and processes content source files according to a set of hierarchical files and directories it
           expects to find at a content source root.
         </p>
+        <br>
         <p>
           <ol>
-            <li class="fragment">Content source root.</li>
-            <li class="fragment">The descriptor file which is required at each content root</li>
-            <li class="fragment">It must be located at the same level as antora.yml file</li>
-            <li class="fragment">ROOT is reserved directory name and must be in all uppercase</li>
-            <li class="fragment">Pages family directory (reserved directory name)</li>
-            <li class="fragment">Partials family directory (reserved directory name)</li>
-            <li class="fragment">Navigation file</li>
-            <li class="fragment">It won’t be processed because located outside the modules</li>
+            <li class="fragment" style="padding-bottom: 20px;">Content source root.</li>
+            <li class="fragment" style="padding-bottom: 20px;">The descriptor file which is required at each content root</li>
+            <li class="fragment" style="padding-bottom: 20px;">It must be located at the same level as antora.yml file</li>
+            <li class="fragment" style="padding-bottom: 20px;">ROOT is reserved directory name and must be in all uppercase</li>
+            <li class="fragment" style="padding-bottom: 20px;">Pages family directory (reserved directory name)</li>
+            <li class="fragment" style="padding-bottom: 20px;">Partials family directory (reserved directory name)</li>
+            <li class="fragment" style="padding-bottom: 20px;">Navigation file</li>
+            <li class="fragment" style="padding-bottom: 20px;">It won’t be processed because located outside the modules</li>
           </ol>
         </p>
       </div>
     </div>
   </div>
 </div>
+<aside class="notes">
+  <div style="font-size: large !important">
+    <p>
+      Antora has its own specific file and directory set to collect and process the content.
+    </p>
+    <hr />
+    <p>
+      At very top, we have root folder for the content source which contains the descriptor file, modules and packages
+    </p>
+    <hr />
+    <p>
+      The descriptor file must be located in the content root. This file indicates to Antora that the modules directory should be collected and processed. We will have a look at it later on.
+    </p>
+    <hr />
+    <p>
+      Then the modules directory which consists our content and must be located at the same level as antora yml file.
+    </p>
+    <hr />
+    <p>
+      Under the modules folder we might have more than one module. But the ROOT module is required and this reserved directory name must be in all uppercase.
+    </p>
+    <hr />
+    <p>
+      Other reserved directory names are "pages" and "partials" which we will write our content in.
+    </p>
+    <hr />
+    <p>
+      And our navigation files that contains page references and will help us to navigate between pages.
+    </p>
+    <hr />
+    <p>
+      All content outside of the modules folder won't be processed.
+    </p>
+    <hr />
+    <p>
+      <b>Let's have a quick look those files and folders than continue with our demo.</b>
+    </p>
+  </div>
+</aside>

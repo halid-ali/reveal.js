@@ -13,14 +13,20 @@
   start_page: site-name::index.adoc
 content:
   sources:
-  - url: github repo link
+    - url: github repo link
       branches: v1, v2
       start_path: docs
 ui:
   bundle:
-      url: ui-bundle.zip link
-      snapshot: true
+    url: ui-bundle.zip link
+    snapshot: true
         </code>
     </pre>
   </div>
 </div>
+<aside class="notes">
+  <div style="font-size: large !important">
+    <p>When snapshot is set to true, Antora will download the UI bundle whenever fetch is activated from the CLI.</p>
+    <hr />
+  </div>
+</aside>
