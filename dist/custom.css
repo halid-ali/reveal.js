@@ -1,31 +1,53 @@
+@import url("https://fonts.cdnfonts.com/css/open-sans");
+@import url("https://fonts.cdnfonts.com/css/cascadia-code");
+
+.title {
+  font-family: "Open Sans Light", Arial, Helvetica, sans-serif;
+  font-size: 45px;
+}
+
+.content {
+  font-family: "Open Sans Light", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  text-align: left;
+}
+
+.content li {
+  line-height: 3rem;
+}
+
+.content pre code {
+  font-family: "Cascadia Code", Courier, monospace;
+  font-size: 17px;
+  line-height: 1.5rem;
+}
+
+.content pre code .hljs-title,
+.content pre code .hljs-keyword,
+.content pre code .hljs-section {
+  font-weight: lighter !important;
+}
+
+div.code {
+  white-space: pre;
+}
+
+.footer-note {
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: "Open Sans Light", Arial, Helvetica, sans-serif;
+}
+
 .cList {
   margin-bottom: 25px;
 }
 
-.int0 {
-  margin-left: 0px;
-  text-align: left;
-}
-
-.int30 {
-  margin-left: 30px;
-  text-align: left;
-}
-
-.int60 {
-  margin-left: 60px;
-  text-align: left;
-}
-
-.int90 {
-  margin-left: 90px;
-  text-align: left;
-}
-
-.number {
-  margin-left: 10px;
-  font-weight: bolder;
-  color: darkorange;
+.logo {
+  width: 20%;
+  float: left;
+  background-color: white;
+  padding: 30px;
+  margin: 30px !important;
 }
 
 code.singleCode {

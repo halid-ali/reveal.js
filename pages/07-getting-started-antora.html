@@ -1,0 +1,91 @@
+<section>
+  <div>
+    <div class="title">Getting Started with Antora</div>
+    <div><hr /></div>
+    <div class="content">
+      <div class="fragment">
+        <p style="text-align: left">Install Antora</p>
+        <pre><code>$ npm i -D -E @antora/cli@3.1 @antora/site-generator@3.1</code></pre>
+        <pre><code>$ npx antora -v
+@antora/cli: 3.1.2
+@antora/site-generator: 3.1.2</code></pre>
+      </div>
+      <div class="fragment">
+        <p style="text-align: left">Set up your documentation</p>
+      </div>
+      <div class="fragment">
+        <p style="text-align: left">Configure the playbook</p>
+      </div>
+      <div class="fragment">
+        <p style="text-align: left">Generate the site</p>
+        <pre>
+        <code>$ npx antora antora-playbook.yml</code>
+      </pre>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <div style="font-size: large !important">
+      <p>
+        The first step is to install Antora on your system. You can do this using a package manager like npm. After the
+        installation, you can verify the installation by checking version.
+      </p>
+      <p>
+        <b><em>click for next</em></b>
+      </p>
+      <p>
+        Once Antora is installed, you'll need to create a directory for your documentation. This directory should
+        contain your documentation files in AsciiDoc format, along with an Antora playbook file.
+      </p>
+      <p>
+        <b><em>click for next</em></b>
+      </p>
+      <p>
+        The playbook file is a YAML file that contains configuration options for Antora. You'll need to configure the
+        playbook to point to your documentation files.
+      </p>
+      <p>
+        <b><em>click for next</em></b>
+      </p>
+      <p>Once your playbook is configured, you can generate the site using the antora command.</p>
+      <p>
+        <b><em>click for next</em></b>
+      </p>
+      <p>Here are some additional resources for learning more about AsciiDoc.</p>
+    </div>
+  </aside>
+</section>
+<section>
+  <div>
+    <div class="title">Antora Playbook File</div>
+    <div><hr /></div>
+    <div class="content">
+      <pre><code class="language-yaml">site:
+  title: My Documentation
+  url: https://my-docs.example.com
+  start_page: index.adoc
+content:
+  sources:
+  - url: https://github.com/my-org/my-docs
+    branches: master
+    start_path: docs
+output:
+  directory: public
+  format: site</code></pre>
+    </div>
+  </div>
+  <aside class="notes">
+    <div style="font-size: large !important">
+      <p>
+        This playbook tells Antora to generate a site with the title "My Documentation", using documentation files
+        located in the <b>docs</b> directory of the <b>my-org/my-docs</b> repository on GitHub. The generated site will
+        be placed in the <b>public</b> directory
+      </p>
+      <p>
+        Once you've generated the site, you can view it in a web browser to see how it looks. If you need to make
+        changes to your documentation, you can edit the AsciiDoc files and re-run the <b>antora</b> command to
+        regenerate the site.
+      </p>
+    </div>
+  </aside>
+</section>
